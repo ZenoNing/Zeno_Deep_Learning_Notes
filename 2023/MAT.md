@@ -20,3 +20,4 @@ subprocess.CalledProcessError: Command 'cmd /u /c "d:\Program Files (x86)\Micros
 ro exit status 255.
 
 The above exception was the direct cause of the following exception:
+...
