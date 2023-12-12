@@ -39,10 +39,12 @@ try:
             print("----match: ", match)
             version = (0, 0, 0) if match is None else match.groups()
 ```
-change```
+change
+```
 compiler_info.decode()
 ```
-to```
+to
+```
 compiler_info.decode(' gbk')
 ```
 Note: must go into the Administrator account, otherwise the file CANNOT be saved.
