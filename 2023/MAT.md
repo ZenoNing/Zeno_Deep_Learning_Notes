@@ -21,3 +21,6 @@ ro exit status 255.
 
 The above exception was the direct cause of the following exception:
 ```
+## 2
+***
+Note: The version of CUDA Toolkit's Visual Studio Integration must match the Visual Studio's version. e.g. Visual Studio Integration 11.0 CANNOT match Visual Studio 2022.
