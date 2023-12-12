@@ -20,6 +20,28 @@ subprocess.CalledProcessError: Command 'cmd /u /c "d:\Program Files (x86)\Micros
 ro exit status 255.
 
 The above exception was the direct cause of the following exception:
+**FIXED**: open "D:\PolyU\Anaconda3\envs\MAT\lib\site-packages\torch\utils\cpp_extension.py", find this code:
+```
+try:
+        if sys.platform.startswith('linux'):
+            minimum_required_version = MINIMUM_GCC_VERSION
+            version = subprocess.check_output([compiler, '-dumpfullversion', '-dumpversion'])
+            version = version.decode().strip().split('.')
+        else:
+            print("----windows operation system")
+            minimum_required_version = MINIMUM_MSVC_VERSION
+            compiler_info = subprocess.check_output(compiler, stderr=subprocess.STDOUT)
+            # the default decode is 'utf8', since cl.exe will return Chinese, so ' gbk'
+            #match = re.search(r'(\d+)\.(\d+)\.(\d+)', compiler_info.decode().strip())
+            print("----compiler_info: ", compiler_info.decode(' gbk'))
+            match = re.search(r'(\d+)\.(\d+)\.(\d+)', compiler_info.decode().strip())
+            print("----match: ", match)
+            version = (0, 0, 0) if match is None else match.groups()
+```
+change ```compiler_info.decode()``` to ```compiler_info.decode(' gbk')```
+Note: must go into the Administrator account, otherwise the file CANNOT be saved.
+
+
 ```
 ## 2
 ***
