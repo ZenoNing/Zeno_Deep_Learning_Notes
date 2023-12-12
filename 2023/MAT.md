@@ -20,6 +20,7 @@ subprocess.CalledProcessError: Command 'cmd /u /c "d:\Program Files (x86)\Micros
 ro exit status 255.
 
 The above exception was the direct cause of the following exception:
+```
 **FIXED**: open "D:\PolyU\Anaconda3\envs\MAT\lib\site-packages\torch\utils\cpp_extension.py", find this code:
 ```
 try:
@@ -38,12 +39,10 @@ try:
             print("----match: ", match)
             version = (0, 0, 0) if match is None else match.groups()
 ```
-change
-```
+change```
 compiler_info.decode()
-``` 
-to
 ```
+to```
 compiler_info.decode(' gbk')
 ```
 Note: must go into the Administrator account, otherwise the file CANNOT be saved.
