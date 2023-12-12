@@ -1,8 +1,8 @@
-#Issues in MAT
-##1
+# Issues in MAT
+## 1
 ***
 First I meet a problem: 
-...
+```
 Setting up PyTorch plugin "bias_act_plugin"... D:\PolyU\Anaconda3\envs\MAT\lib\site-packages\torch\utils\cpp_extension.py:287: UserWarning: Error checking compiler version for cl: 
 'utf-8' codec can't decode byte 0xd3 in position 0: invalid continuation byte
   warnings.warn('Error checking compiler version for {}: {}'.format(compiler, error))
@@ -20,4 +20,4 @@ subprocess.CalledProcessError: Command 'cmd /u /c "d:\Program Files (x86)\Micros
 ro exit status 255.
 
 The above exception was the direct cause of the following exception:
-...
+```
