@@ -50,7 +50,6 @@ compiler_info.decode(' gbk')
 Note: must go into the Administrator account, otherwise the file CANNOT be saved.
 
 
-```
 ## 2
 ***
 Note: The version of CUDA Toolkit's Visual Studio Integration must match the Visual Studio's version. e.g. Visual Studio 2022 CANNOT fit Visual Studio Integration 11.0.
