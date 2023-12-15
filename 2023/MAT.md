@@ -81,3 +81,10 @@ distutils.errors.DistutilsPlatformError: Microsoft Visual C++ 14.0 or greater is
 ild-tools/
 ```
 **FIXED**: The reason is I've installed 2 different version of Visual Studio simutaneously: 2019 and 2022. The CUDA Visual Studio Integration 11.0 only fit Visual Studio 2019. However, based on the msvc.py, it will check the latest version of Visual Studio automatically. Thus, only Visual Studio 2022 could be searched and it is not matched to the project, that's why CalledProcessError was invoked. So the solution is to simply uninstall Visual Studio 2022.
+
+## 4
+I found that pip install path is wrong, fixed it by 
+```
+conda install pip
+```
+It will change the default pip install location to your conda env automatically.
