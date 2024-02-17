@@ -3,3 +3,4 @@
 
 /saicinpainting/training/trainers/__init__.py (*class* DefaultInpaintingTrainingModel) **->**
 
+../trainers/default.py
