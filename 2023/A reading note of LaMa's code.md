@@ -4,6 +4,7 @@
 ../trainers/default.py (*function* get_ramp) **->** /saicinpainting/utils.py (*class* LinearRamp LadderRamp)\ **->** \
 **DefaultTrainingModel** 
 *function* forward
-
+**BaseinpaintingTrainingModule**
+if not predict only : not read yet
 
 
