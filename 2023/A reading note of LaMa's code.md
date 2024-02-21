@@ -3,11 +3,11 @@
 /saicinpainting/training/trainers/\_\_init_\_.py (*function* get_training_model_class) **->** ../trainers/default.py(*class* DefaultInpaintingTrainingModel) **->** \
 ../trainers/default.py (*function* get_ramp) **->** /saicinpainting/utils.py (*class* LinearRamp LadderRamp)\ **->** \
 
-**DefaultTrainingModel** 
+**DefaultTrainingModel** \
 *function* init  
 *function* forward 
 
-**BaseinpaintingTrainingModule** 
+**BaseinpaintingTrainingModule** \
 if not predict only : not read yet 
 
 
