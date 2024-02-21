@@ -4,7 +4,7 @@
 ../trainers/default.py (*function* get_ramp) **->** /saicinpainting/utils.py (*class* LinearRamp LadderRamp)\ **->** \
 
 **DefaultTrainingModel** \
-*function* \_\_init_\_\ \
+*function* \_\_init_\_
 *function* forward \
 
 **BaseinpaintingTrainingModule** \
