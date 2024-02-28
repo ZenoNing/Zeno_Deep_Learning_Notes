@@ -2,7 +2,7 @@
 
 ## 1. forward process
 
-<div align="center"><img src="/2023/v2-d7feccfa52e3c129c31edbfeb085282d_r.png"></div>
+<div align="center"><img src="/2024/Markov_Chain.png"></div>
 
 <p align="center">Markov Chain</p>
 
@@ -36,7 +36,7 @@ We must predict $x_{t-1}$ from $x_t$, using Bayes' theorem.
 
 Conditional Probability:
 
-<div align="center"><img src="/2023/Conditional_Probability.png" width="60%" height="60%"></div>
+<div align="center"><img src="/2024/Conditional_Probability.png" width="60%" height="60%"></div>
 
 $P(A|B)=\cfrac{P(AB)}{P(B)}$, Similarly, $P(B|A)=\cfrac{P(AB)}{P(A)}$.
 
