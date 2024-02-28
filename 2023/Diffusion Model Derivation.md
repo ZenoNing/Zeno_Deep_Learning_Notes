@@ -68,7 +68,7 @@ $$P(x_{t-1}|x_t,\ x_0)=A\exp(-\cfrac{1}{2}\cdot
 
 (Note: $A$ is the index that we don't much care.)
 
-Transform the above equation, because we need to focus on $x_{t-1}$:
+Transform the above equation, as we need to focus on $x_{t-1}$ (we only care about $x_{t-1}$, $x_t$ and $x_0$ are known distribution):
 
 $$P(x_{t-1}|x_t,\ x_0)=A\exp(-\cfrac{1}{2}\cdot[
 (\cfrac{\alpha_t}{1-\alpha_t}+\cfrac{1}{1-\bar{\alpha_{t-1}}})x_{t-1}^2-
@@ -76,5 +76,24 @@ $$P(x_{t-1}|x_t,\ x_0)=A\exp(-\cfrac{1}{2}\cdot[
 C(x_t, x_0)
 ])$$
 
-Since we only care about x
+Since $P(x_{t-1}|x_t,\ x_0)$ should be a Normal Distribution, its format is like: $$\exp(-\cfrac{x^2+\mu^2-2\mu x}{2\sigma^2})$$
 
+Thus, $$\cfrac{1}{\sigma^2}=\cfrac{\alpha_t}{1-\alpha_t}+\cfrac{1}{1-\bar{\alpha_{t-1}}}=\cfrac{1-\bar{\alpha_t}}{(1-\alpha_t)(1-\bar{\alpha_{t-1}})},\ 
+\sigma^2=\cfrac{(1-\alpha_t)(1-\bar{\alpha_{t-1}})}{1-\bar{\alpha_t}} $$
+
+plug it in $$\mu=\cfrac{1}{2}\sigma^2(\cfrac{2\sqrt{\alpha_t}}{1-\alpha_t}x_t+\cfrac{2\sqrt{\bar{\alpha_{t-1}}}}{1-\bar{\alpha_{t-1}}}x_0)$$
+
+We can get $$\mu=\cfrac{(1-\bar{\alpha_{t-1}})\sqrt{\alpha_t}}{1-\bar{\alpha_t}}x_t+\cfrac{(1-\alpha_t)\sqrt{\bar{\alpha_{t-1}}}}{1-\bar{\alpha_t}}x_0$$
+
+Since $x_t=\sqrt{\bar{\alpha_t}}x_0+\sqrt{1-\bar{\alpha_t}}\epsilon$, we can substitute $x_0=\cfrac{x_t-\sqrt{1-\bar{\alpha_t}}\epsilon}{\sqrt{\bar{\alpha_t}}}$ into the above equation:
+
+$$
+\begin{align}
+\mu &= \cfrac{(1-\bar{\alpha_{t-1}})\sqrt{\alpha_t}}{1-\bar{\alpha_t}}x_t+\cfrac{(1-\alpha_t)\sqrt{\bar{\alpha_{t-1}}}}{1-\bar{\alpha_t}}\cdot \cfrac{x_t-\sqrt{1-\bar{\alpha_t}}\epsilon}{\sqrt{\bar{\alpha_t}}}\\
+&= \cfrac{(1-\bar{\alpha_{t-1}})\sqrt{\alpha_t}}{1-\bar{\alpha_t}}x_t+\cfrac{1-\alpha_t}{(1-\bar{\alpha_t})\sqrt{\alpha_t}}xt-\cfrac{1-\alpha_t}{\sqrt{1-\bar{\alpha_t}}\sqrt{\alpha_t}}\epsilon\\
+&= \cfrac{1}{\sqrt{\alpha_t}}\left(\cfrac{\alpha_t-\bar{\alpha_t}+1-\alpha_t}{1-\bar{\alpha_t}}x_t-\cfrac{1-\alpha_t}{\sqrt{1-\bar{\alpha_t}}}\epsilon\right)\\
+&= \cfrac{1}{\sqrt{\alpha_t}}\left(x_t-\cfrac{1-\alpha_t}{\sqrt{1-\bar{\alpha_t}}}\epsilon\right)
+\end{align}
+$$
+
+In $\sigma$ and $\mu$, there's nothing we don't know but $\epsilon$, that's why we need to train a Diffusion Model to predict it, completing the reverse process.
