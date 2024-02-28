@@ -14,6 +14,15 @@ Which means $x_t=\sqrt{1-\beta_t}x_{t-1}+\sqrt{\beta_t}\epsilon$
 
 Let $\alpha_t=1-\beta_t$, then $x_t=\sqrt{\alpha_t}x_{t-1}+\sqrt{1-\alpha_t}\epsilon$
 
-$x_t=\sqrt{\alpha_t}x_{t-1}+\sqrt{1-\alpha_t}\epsilon=\sqrt{\alpha_t}(\sqrt{\alpha_{t-1}}x_{t-2}+\sqrt{1-\alpha_{t-1}}\epsilon)+\sqrt{1-\alpha_t}\epsilon=\sqrt{\alpha_t}\sqrt{\alpha_{t-1}}x_{t-2}+\sqrt{\alpha_t}\sqrt{1-\alpha_{t-1}}\epsilon+\sqrt{1-\alpha_t}\epsilon$
+$$x_t=\sqrt{\alpha_t}x_{t-1}+\sqrt{1-\alpha_t}\epsilon=\sqrt{\alpha_t}(\sqrt{\alpha_{t-1}}x_{t-2}+\sqrt{1-\alpha_{t-1}}\epsilon)+\sqrt{1-\alpha_t}\epsilon=\sqrt{\alpha_t}\sqrt{\alpha_{t-1}}x_{t-2}+\sqrt{\alpha_t}\sqrt{1-\alpha_{t-1}}\epsilon+\sqrt{1-\alpha_t}\epsilon$$
 
+According to the Additive property of a Normal Distribution, $$X_1\propto \sqrt{\alpha_t}\sqrt{1-\alpha_{t-1}}\epsilon = \mathcal{N}(0,\ \alpha_t(1-\alpha_{t-1})),$$
+
+$$X_2\propto \sqrt{1-\alpha_t}\epsilon = \mathcal{N}(0,\ 1-\alpha_t)$$
+
+So, $$X=X_1+X_2=\mathcal{N}(0,\ \alpha_t-\alpha_t \alpha_{t-1}+1-\alpha_t)=\mathcal{N}(0,\ 1-\alpha_t \alpha_{t-1})$$
+
+So let $x_t=\sqrt{\alpha_t \alpha_{t-1}}x_{t-2}+\sqrt{1-\alpha_t \alpha_{t-1}}\epsilon$
+
+According to Mathematical Induction, $$x_t=\sqrt{\alpha_t \alpha_{t-1} \ldots \alpha_1}x_0+\sqrt{1-\alpha_t \alpha_{t-1} \ldots \alpha_1}\epsilon$$
 
