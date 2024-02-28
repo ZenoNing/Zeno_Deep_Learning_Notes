@@ -2,13 +2,13 @@
 
 ## 1. forward process
 
-<img src="/2023/v2-d7feccfa52e3c129c31edbfeb085282d_r.png">
+<div align="center"><img src="/2023/v2-d7feccfa52e3c129c31edbfeb085282d_r.png"></div>
 
 <p align="center">Markov Chain</p>
 
 > <p align="center">"The future is independent of the past given the present."</p>
 
-Each step: $q(x_t\ |\ x_{t-1})=\mathcal N(x_t;\ \sqrt{1-\beta_t}x_{t-1},\ {\beta_t}I)$
+Each step: $q(x_t|x_{t-1})=\mathcal N(x_t;\ \sqrt{1-\beta_t}x_{t-1},\ {\beta_t}I)$
 
 Which means $x_t=\sqrt{1-\beta_t}x_{t-1}+\sqrt{\beta_t}\epsilon$
 
@@ -36,4 +36,45 @@ We must predict $x_{t-1}$ from $x_t$, using Bayes' theorem.
 
 Conditional Probability:
 
+<div align="center"><img src="/2023/Conditional_Probability.png" width="60%" height="60%"></div>
+
+$P(A|B)=\cfrac{P(AB)}{P(B)}$, Similarly, $P(B|A)=\cfrac{P(AB)}{P(A)}$.
+
+Thus, we can get to Bayes' theorem: $$P(B|A)=\cfrac{P(A|B)P(B)}{P(A)}$$
+
+$P(B|A)$: Posterior Probability
+
+$P(A|B)$: Likelihood
+
+$P(B)$: Prior Probability
+
+$P(A)$: Marginal Probability
+
+According to Bayes' theorem, we can get: $$P(x_{t-1}|x_t)=\cfrac{P(x_t|x_{t-1})P(x_{t-1})}{P(x_t)}$$
+
+Further, on the condition of known $x_0$:
+$$P(x_{t-1}|x_t,\ x_0)=\cfrac{P(x_t|x_{t-1},x_0)P(x_{t-1}|x_0)}{P(x_t|x_0)}$$
+
+According to Markov Chain's property (The future is independent of the past given the present): $P(x_{t-1}|x_t,\ x_0)=P(x_{t-1}|x_t)$
+
+Thus, $$P(x_{t-1}|x_t)=\cfrac{\mathcal{N}(\sqrt{\alpha_t}x_{t-1},\ 1-\alpha_t) \mathcal{N}(\sqrt{\bar{\alpha_{t-1}}}x_0,\ 1-\bar{\alpha_{t-1}})}{\mathcal{N}(\sqrt{\bar{\alpha_t}}x_0,\ 1-\bar{\alpha_t})}$$
+
+According to Normal Distribution: $\mathcal{N}=\cfrac{1}{\sqrt{2\pi}\sigma}e^{-\cfrac{(x-\mu)^2}{2\sigma^2}}$
+
+$$P(x_{t-1}|x_t,\ x_0)=A\exp(-\cfrac{1}{2}\cdot
+[\cfrac{(x_t-\sqrt{\alpha_t}x_{t-1})^2}{1-\alpha_t}+
+\cfrac{(x_{t-1}-\sqrt{\bar{\alpha_{t-1}}}x_0)^2}{1-\bar{\alpha_{t-1}}}-
+\cfrac{(x_{t}-\sqrt{\bar{\alpha_{t}}}x_0)^2}{1-\bar{\alpha_t}}])$$
+
+(Note: $A$ is the index that we don't much care.)
+
+Transform the above equation, because we need to focus on $x_{t-1}$:
+
+$$P(x_{t-1}|x_t,\ x_0)=A\exp(-\cfrac{1}{2}\cdot[
+(\cfrac{\alpha_t}{1-\alpha_t}+\cfrac{1}{1-\bar{\alpha_{t-1}}})x_{t-1}^2-
+(\cfrac{2\sqrt{\alpha_t}x_t}{1-\alpha_t}+\cfrac{2\sqrt{\bar{\alpha_{t-1}}}x_0}{1-\bar{\alpha_{t-1}}})x_{t-1}+
+C(x_t, x_0)
+])$$
+
+Since we only care about x
 
