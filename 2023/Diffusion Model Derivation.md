@@ -20,6 +20,8 @@ According to the Additive property of a Normal Distribution, $$X_1\propto \sqrt{
 
 $$X_2\propto \sqrt{1-\alpha_t}\epsilon = \mathcal{N}(0,\ 1-\alpha_t)$$
 
+Let 
+
 So, $$X=X_1+X_2=\mathcal{N}(0,\ \alpha_t-\alpha_t \alpha_{t-1}+1-\alpha_t)=\mathcal{N}(0,\ 1-\alpha_t \alpha_{t-1})$$
 
 So let $x_t=\sqrt{\alpha_t \alpha_{t-1}}x_{t-2}+\sqrt{1-\alpha_t \alpha_{t-1}}\epsilon$
