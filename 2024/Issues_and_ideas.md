@@ -48,7 +48,7 @@ The original loss prediction in DDPM:
 
 $$\epsilon_\theta (x_t, t)$$
 
-The loss:
+The loss, AKA the optimization objective:
 
 $$\mathcal{L}=MSE{\Vert \epsilon_t-\epsilon_\theta (x_t, t)\Vert^2}$$
 
