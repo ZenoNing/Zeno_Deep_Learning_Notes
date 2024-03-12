@@ -36,7 +36,7 @@ We have already started training this model on CelebA-HQ256 datasets [<sup>2</su
 
 **Transformers:**
 
-a great many of parameters; requirement of large amounts of training data; slow convergence process,
+a great many of parameters; requirement of large amounts of training data; slow convergence process; have to introduce an extra part which called StyleGAN to get pluralistic generation
 
 remarkable scaling properties under increasing model size, training compute and data; efficiently handle dependencies across larger distances (which denotes extracting global feature more efficiently in inpainting tasks, compared to UNet based on CNN architecture)
 
@@ -69,6 +69,8 @@ $$\hat{\epsilon_\theta} (x_t, t, c)=(1-w)\epsilon_\theta (x_t, t, c)-w\epsilon_\
 <div align="center"><img src="https://raw.githubusercontent.com/ZenoNing/Zeno_Deep_Learning_Notes/main/2024/Architecture_LDM.png"></div>
 
 The idea is pretty simple but worked, just to use variational auto-encoder (VAE) architecture, compressing the original image's dimension into a latent space, and do diffusion process and reverse process in the latent space so that we can not only saving computational resources, but also make the computation of training diffusion models not prohibitive.
+
+
 
 # References
 
