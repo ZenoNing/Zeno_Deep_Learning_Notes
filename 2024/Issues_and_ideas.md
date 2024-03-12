@@ -82,7 +82,8 @@ The idea is pretty simple but worked, just to use variational auto-encoder (VAE)
 
 **IDEA**: In the DiT paper, a way to replace the Latent Diffusion Models' classical UNet architecure by transformer blocks has been found. We can deploy this novel architecture into inpainting tasks and do some optimization to fit the task. 
 
-![image](https://github.com/ZenoNing/Zeno_Deep_Learning_Notes/assets/116165764/b2886301-3d96-4026-88d0-0f54c3361a97)
+<div align="center"><img src="https://raw.githubusercontent.com/ZenoNing/Zeno_Deep_Learning_Notes/main/2024/Architecture_DiT.png"></div>
+
 
 
 # References
