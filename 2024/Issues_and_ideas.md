@@ -30,6 +30,9 @@ After further investigation, we found that this is basically due to the hyperpar
 
 We have already started training this model on CelebA-HQ256 datasets [<sup>2</sup>](#refer-anchor-2) thanks to their released code [<sup>7</sup>](#refer-anchor-7), pre-trained models, and detailed configurations (I must say the Authors are very kind people since they almost answer any kind of issues in their repository and find the solution for the questioners. Based on their tireless efforts, the entire repository has now become quite complete). My highest respect and appreciation!  **At this moment, the whole model is in training.**
 
+
+      
+
 # Ideas
 
 **The backbone paper: Scalable Diffusion Models with Transformers**
