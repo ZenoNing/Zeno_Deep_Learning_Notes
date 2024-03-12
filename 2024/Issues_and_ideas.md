@@ -15,4 +15,4 @@ Training this model  requires high performance computational resources. Accordin
 
 <div id="refer-anchor-1"></div>
 
-- [1] [MAT](https://github.com/fenglinglwb/MAT/issues/23)
+- [1] [MAT: Mask-Aware Transformer for Large Hole Image Inpainting](https://github.com/fenglinglwb/MAT/issues/23)
