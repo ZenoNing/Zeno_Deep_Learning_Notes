@@ -50,7 +50,7 @@ $$\epsilon_\theta (x_t, t)$$
 
 The loss:
 
-$$\mathcal{L}=MSE{\Vert \epsilon_t-\epsilon_\theta (x_t, t)\Vert^2}
+$$\mathcal{L}=MSE{\Vert \epsilon_t-\epsilon_\theta (x_t, t)\Vert^2}$$
 
 Classifier guidance diffusion:
 
