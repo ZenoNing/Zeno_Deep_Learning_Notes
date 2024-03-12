@@ -38,7 +38,7 @@ We have already started training this model on CelebA-HQ256 datasets [<sup>2</su
 
 a great many of parameters; requirement of large amounts of training data; slow convergence process,
 
-remarkable scaling properties under increasing model size, training compute and data; efficiently handle dependencies across larger distances (which denotes global feature in inpainting tasks)
+remarkable scaling properties under increasing model size, training compute and data; efficiently handle dependencies across larger distances (which denotes extracting global feature more efficiently in inpainting tasks, compared to UNet based on CNN architecture)
 
 **Diffusion Models:**
 
