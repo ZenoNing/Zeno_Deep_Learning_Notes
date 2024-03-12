@@ -42,9 +42,15 @@ remarkable scaling properties under increasing model size, training compute and 
 
 **Diffusion Models:**
 
+*The knowledge of Classifier-free guidance* 
+
 $$\epsilon_\theta (x_t, t, c)$$
 
+Where $c$ denotes prior constraints (in the original paper, it is class condition; in inpainting task, it should be the known parts of the image)
+
 $$\hat{\epsilon_\theta} (x_t, t, c)=(1-w)\epsilon_\theta (x_t, t, c)-w\epsilon_\theta (x_t, t)$$
+
+(we can use this formula to control the constraints so that we can make a trade-off between diversity, which means emphasize the class; and creativity. *how to deploy it into inpainting tasks: unknown*)
 
 # References
 
