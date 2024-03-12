@@ -8,7 +8,7 @@ Training this model  requires high-performance computational resources. Accordin
 
 In our tentative try, using 2 Nvidia 2080ti GPUs, it costs about 40 days to process 1/3 of the training. In Author's default configuration, `--batch_size=32`, however, because of the VRAM's limitation, we can only set `--batch_size=2`, to let the programme run properly. 
 
-In our approach, the FID metric [<sup>5</sup>](#refer-anchor-5) coverages to 4.9 . We haven't tried to train this model on 256x256 image resolution yet. 
+In our approach, the FID metric [<sup>5</sup>](#refer-anchor-5) converges to 4.9 . We haven't tried to train this model on 256x256 image resolution yet. 
 
 ## Issue2 RePaint's training process
 
@@ -32,7 +32,9 @@ We have already started training this model on CelebA-HQ256 datasets [<sup>2</su
 
 # Ideas
 
+## pros and cons
 
+Transformers: a great many of parameters; requirement of large amounts of training data; slow convergence process, 
 
 # References
 
