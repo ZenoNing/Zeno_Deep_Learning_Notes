@@ -56,3 +56,7 @@ We have already started training this model thanks to their released code, pre-t
 <div id="refer-anchor-6"></div>
 
 - [6] [The Unreasonable Effectiveness of Deep Features as a Perceptual Metric](https://github.com/richzhang/PerceptualSimilarity)
+  
+<div id="refer-anchor-7"></div>
+
+- [7] [LaMa: Resolution-robust Large Mask Inpainting with Fourier Convolutions](https://github.com/advimman/lama) 
