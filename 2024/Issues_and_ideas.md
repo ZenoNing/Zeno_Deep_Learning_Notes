@@ -29,10 +29,7 @@ After further investigation, we found that this is basically due to the hyperpar
 <div align="center"><img src="https://raw.githubusercontent.com/ZenoNing/Zeno_Deep_Learning_Notes/main/2024/Architecture_LaMa.png"></div>
 
 We have already started training this model on CelebA-HQ256 datasets [<sup>2</sup>](#refer-anchor-2) thanks to their released code [<sup>7</sup>](#refer-anchor-7), pre-trained models, and detailed configurations (I must say the Authors are very kind people since they almost answer any kind of issues in their repository and find the solution for the questioners. Based on their tireless efforts, the entire repository has now become quite complete). My highest respect and appreciation!  **At this moment, the whole model is in training.**
-
-
-      
-
+ 
 # Ideas
 
 **The backbone paper: Scalable Diffusion Models with Transformers**
@@ -57,7 +54,7 @@ advantages:
 
 inherent pluralistic generation; high generative quality
 
-*The knowledge of Classifier-free guidance* 
+*The knowledge of Classifier-free guidance [<sup>8</sup>](#refer-anchor-8) * 
 
 The original loss prediction in DDPM:
 
@@ -87,7 +84,10 @@ The idea is pretty simple but worked, just to use variational auto-encoder (VAE)
 
 <div align="center"><img src="https://raw.githubusercontent.com/ZenoNing/Zeno_Deep_Learning_Notes/main/2024/Architecture_DiT.png"></div>
 
+How to fit the inpainting task (future experiment study):
 
+1. Using Multi-head contextual attention (MCA) to replace the Multi-head self-attention, conducts longrange dependency modeling efficiently by exploiting valid tokens, indicated by a dynamic mask.
+2. Using resample scheme, to make the inpainted part semantically correct
 
 # References
 
@@ -117,4 +117,7 @@ The idea is pretty simple but worked, just to use variational auto-encoder (VAE)
   
 <div id="refer-anchor-7"></div>
 
-- [7] [LaMa: Resolution-robust Large Mask Inpainting with Fourier Convolutions](https://github.com/advimman/lama) 
+- [7] [LaMa: Resolution-robust Large Mask Inpainting with Fourier Convolutions](https://github.com/advimman/lama)
+
+<div id="refer-anchor-8"></div>
+- [8] [Classifier-Free Diffusion Guidance](https://arxiv.org/abs/2207.12598)
