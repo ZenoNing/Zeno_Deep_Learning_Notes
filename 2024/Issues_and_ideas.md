@@ -64,7 +64,7 @@ $$\hat{\epsilon_\theta} (x_t, t, c)=(1-w)\epsilon_\theta (x_t, t, c)-w\epsilon_\
 
 *The knowledge of LDM (Latent Diffusion Models)
 
-![image](https://github.com/ZenoNing/Zeno_Deep_Learning_Notes/assets/116165764/814cb798-48b9-466e-9754-9a29f5169421)
+<div align="center"><img src="https://raw.githubusercontent.com/ZenoNing/Zeno_Deep_Learning_Notes/main/2024/Architecture_LDM.png"></div>
 
 
 the idea is pretty simple but worked, just to use auto-encoder architecture, compressing the original image's dimension into latent space, and do diffusion process and reverse process in this latent space so that we can not only saving computational resources, but also 
