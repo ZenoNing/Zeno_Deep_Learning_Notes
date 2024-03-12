@@ -44,7 +44,7 @@ remarkable scaling properties under increasing model size, training compute and 
 
 $$\epsilon_\theta (x_t, t, c)$$
 
-$$\hat{\epsilon_\theta} (x_t, t, c)=(1-w)\epsilon_\theta (x_t, t, c)-w(x_t, t)$$
+$$\hat{\epsilon_\theta} (x_t, t, c)=(1-w)\epsilon_\theta (x_t, t, c)-w\epsilon_\theta (x_t, t)$$
 
 # References
 
