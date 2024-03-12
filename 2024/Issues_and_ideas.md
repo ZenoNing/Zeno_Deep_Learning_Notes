@@ -32,7 +32,7 @@ We have already started training this model on CelebA-HQ256 datasets [<sup>2</su
  
 # Ideas
 
-**The backbone paper: Scalable Diffusion Models with Transformers**
+**The backbone paper: Scalable Diffusion Models with Transformers [<sup>10</sup>](#refer-anchor-10)**
 
 ## Transformers:
 
@@ -64,7 +64,7 @@ The loss, AKA the optimization objective:
 
 $$\mathcal{L}=MSE{\Vert \epsilon_t-\epsilon_\theta (x_t, t)\Vert^2}$$
 
-Classifier guidance diffusion:
+Classifier guidance diffusion [<sup>4</sup>](#refer-anchor-4):
 
 $$\epsilon_\theta (x_t, t, c)$$
 
@@ -74,20 +74,20 @@ $$\hat{\epsilon_\theta} (x_t, t, c)=(1-w)\epsilon_\theta (x_t, t, c)-w\epsilon_\
 
 (we can use this formula to control the constraints so that we can make a trade-off between diversity, which means emphasize the class; and creativity. *how to deploy it into inpainting tasks: unknown*)
 
-*The knowledge of LDM (Latent Diffusion Models)*
+*The knowledge of LDM (Latent Diffusion Models)[<sup>9</sup>](#refer-anchor-9)*
 
 <div align="center"><img src="https://raw.githubusercontent.com/ZenoNing/Zeno_Deep_Learning_Notes/main/2024/Architecture_LDM.png"></div>
 
 The idea is pretty simple but worked, just to use variational auto-encoder (VAE) architecture, compressing the original image's dimension into a latent space, and do diffusion process and reverse process in the latent space so that we can not only saving computational resources, but also make the computation of training diffusion models not prohibitive.
 
-**IDEA**: In the DiT paper, a way to replace the Latent Diffusion Models' classical UNet architecure by transformer blocks has been found. We can deploy this novel architecture into inpainting tasks and do some optimization to fit the task. 
+**IDEA**: In the DiT [<sup>10</sup>](#refer-anchor-10) paper, a way to replace the Latent Diffusion Models' classical UNet architecure by transformer blocks has been found. Until now there's no worked implementations of inpainting task with this architecture. We can try to explore the possibility to deploy this novel architecture into inpainting tasks and do some optimization to fit the task. 
 
 <div align="center"><img src="https://raw.githubusercontent.com/ZenoNing/Zeno_Deep_Learning_Notes/main/2024/Architecture_DiT.png"></div>
 
 How to fit the inpainting task (future experiment study):
 
-1. Using Multi-head contextual attention (MCA) to replace the Multi-head self-attention, conducts longrange dependency modeling efficiently by exploiting valid tokens, indicated by a dynamic mask.
-2. Using resample scheme, to make the inpainted part semantically correct
+1. Using Multi-head contextual attention (MCA) [<sup>1</sup>](#refer-anchor-1)to replace the Multi-head self-attention, conducts longrange dependency modeling efficiently by exploiting valid tokens, indicated by a dynamic mask.
+2. Using resample scheme [<sup>3</sup>](#refer-anchor-3), to make the inpainted part semantically correct
 
 # References
 
@@ -120,4 +120,13 @@ How to fit the inpainting task (future experiment study):
 - [7] [LaMa: Resolution-robust Large Mask Inpainting with Fourier Convolutions](https://github.com/advimman/lama)
 
 <div id="refer-anchor-8"></div>
+
 - [8] [Classifier-Free Diffusion Guidance](https://arxiv.org/abs/2207.12598)
+
+<div id="refer-anchor-9"></div>
+
+- [9] [High-Resolution Image Synthesis with Latent Diffusion Models](https://github.com/CompVis/latent-diffusion)
+
+<div id="refer-anchor-10"></div>
+
+- [10] [Scalable Diffusion Models with Transformers](https://github.com/facebookresearch/DiT)
