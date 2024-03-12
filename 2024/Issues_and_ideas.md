@@ -54,7 +54,7 @@ advantages:
 
 inherent pluralistic generation; high generative quality
 
-*The knowledge of Classifier-free guidance [<sup>8</sup>](#refer-anchor-8) * 
+*The knowledge of Classifier-free guidance [<sup>8</sup>](#refer-anchor-8)* 
 
 The original loss prediction in DDPM:
 
