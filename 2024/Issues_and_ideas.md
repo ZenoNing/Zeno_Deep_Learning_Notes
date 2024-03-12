@@ -38,9 +38,11 @@ We have already started training this model on CelebA-HQ256 datasets [<sup>2</su
 
 a great many of parameters; requirement of large amounts of training data; slow convergence process,
 
-remarkable scaling properties under increasing model size, training compute and data
+remarkable scaling properties under increasing model size, training compute and data; efficiently handle dependencies across larger distances (which denotes global feature in inpainting tasks)
 
 **Diffusion Models:**
+
+The backbone paper: Scalable Diffusion Models with Transformers
 
 *The knowledge of Classifier-free guidance* 
 
@@ -62,12 +64,11 @@ $$\hat{\epsilon_\theta} (x_t, t, c)=(1-w)\epsilon_\theta (x_t, t, c)-w\epsilon_\
 
 (we can use this formula to control the constraints so that we can make a trade-off between diversity, which means emphasize the class; and creativity. *how to deploy it into inpainting tasks: unknown*)
 
-*The knowledge of LDM (Latent Diffusion Models)
+*The knowledge of LDM (Latent Diffusion Models)*
 
 <div align="center"><img src="https://raw.githubusercontent.com/ZenoNing/Zeno_Deep_Learning_Notes/main/2024/Architecture_LDM.png"></div>
 
-
-the idea is pretty simple but worked, just to use auto-encoder architecture, compressing the original image's dimension into latent space, and do diffusion process and reverse process in this latent space so that we can not only saving computational resources, but also 
+The idea is pretty simple but worked, just to use variational auto-encoder (VAE) architecture, compressing the original image's dimension into a latent space, and do diffusion process and reverse process in the latent space so that we can not only saving computational resources, but also make the computation of training diffusion models not prohibitive.
 
 # References
 
