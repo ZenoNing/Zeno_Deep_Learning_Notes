@@ -1,4 +1,3 @@
-![image](https://github.com/ZenoNing/Zeno_Deep_Learning_Notes/assets/116165764/b7a20eb1-5459-4533-add6-d8bded0564aa)
-![image](https://github.com/ZenoNing/Zeno_Deep_Learning_Notes/assets/116165764/2a0ece96-734f-446e-8d61-85ab2b44b63f)
-![image](https://github.com/ZenoNing/Zeno_Deep_Learning_Notes/assets/116165764/fc9a18ef-cf7e-47a7-9354-8a531ff02b70)
-
+<div align="center"><img src="https://raw.githubusercontent.com/ZenoNing/Zeno_Deep_Learning_Notes/main/2024/Architecture_LaMa.png"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/ZenoNing/Zeno_Deep_Learning_Notes/main/2024/Architecture_MAT.png"></div>
+<div align="center"><img src="https://raw.githubusercontent.com/ZenoNing/Zeno_Deep_Learning_Notes/main/2024/Architecture_RePaint.png"></div>
