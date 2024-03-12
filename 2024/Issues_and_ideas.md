@@ -12,9 +12,9 @@ Training this model  requires high performance computational resources. Accordin
 
 
 ## References
-@inproceedings{li2022mat,
+`@inproceedings{li2022mat,
     title={MAT: Mask-Aware Transformer for Large Hole Image Inpainting},
     author={Li, Wenbo and Lin, Zhe and Zhou, Kun and Qi, Lu and Wang, Yi and Jia, Jiaya},
     booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
     year={2022}
-}
+}`
