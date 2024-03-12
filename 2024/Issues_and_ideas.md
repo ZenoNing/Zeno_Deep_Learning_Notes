@@ -54,7 +54,7 @@ We have already started training this model on CelebA-HQ256 datasets [<sup>2</su
   
 <div id="refer-anchor-5"></div>
 
-- [5] [GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium] (https://papers.nips.cc/paper_files/paper/2017/hash/8a1d694707eb0fefe65871369074926d-Abstract.html)
+- [5] [GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium](https://papers.nips.cc/paper_files/paper/2017/hash/8a1d694707eb0fefe65871369074926d-Abstract.html)
   
 <div id="refer-anchor-6"></div>
 
