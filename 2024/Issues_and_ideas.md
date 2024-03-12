@@ -36,21 +36,21 @@ We have already started training this model on CelebA-HQ256 datasets [<sup>2</su
 
 ## Transformers:
 
-disadvantages:
+*disadvantages:
 
 a great many of parameters; requirement of large amounts of training data; slow convergence process; have to introduce an extra part which called StyleGAN to get pluralistic generation
 
-advantages:
+*advantages:
 
 remarkable scaling properties under increasing model size, training compute and data; efficiently handle dependencies across larger distances (which denotes extracting global feature more efficiently in inpainting tasks, compared to UNet based on CNN architecture)
 
 ## Diffusion Models:
 
-disadvantages:
+*disadvantages:
 
 staying intact of the UNet design, The architecture still has the potential to be developed and enhanced
 
-advantages:
+*advantages:
 
 inherent pluralistic generation; high generative quality
 
