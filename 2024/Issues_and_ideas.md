@@ -44,6 +44,12 @@ remarkable scaling properties under increasing model size, training compute and 
 
 *The knowledge of Classifier-free guidance* 
 
+The original loss prediction in DDPM:
+
+$$\epsilon_\theta (x_t, t)$$
+
+Classifier guidance diffusion:
+
 $$\epsilon_\theta (x_t, t, c)$$
 
 Where $c$ denotes prior constraints (in the original paper, it is class condition; in inpainting task, it should be the known parts of the image)
