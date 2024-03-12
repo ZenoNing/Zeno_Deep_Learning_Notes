@@ -32,17 +32,27 @@ We have already started training this model on CelebA-HQ256 datasets [<sup>2</su
 
 # Ideas
 
-## pros and cons
+**The backbone paper: Scalable Diffusion Models with Transformers**
 
-**Transformers:**
+## Transformers:
+
+disadvantages:
 
 a great many of parameters; requirement of large amounts of training data; slow convergence process; have to introduce an extra part which called StyleGAN to get pluralistic generation
 
+advantages:
+
 remarkable scaling properties under increasing model size, training compute and data; efficiently handle dependencies across larger distances (which denotes extracting global feature more efficiently in inpainting tasks, compared to UNet based on CNN architecture)
 
-**Diffusion Models:**
+## Diffusion Models:
 
-The backbone paper: Scalable Diffusion Models with Transformers
+disadvantages:
+
+staying intact of the UNet design, The architecture still has the potential to be developed and enhanced
+
+advantages:
+
+inherent pluralistic generation; high generative quality
 
 *The knowledge of Classifier-free guidance* 
 
@@ -70,6 +80,9 @@ $$\hat{\epsilon_\theta} (x_t, t, c)=(1-w)\epsilon_\theta (x_t, t, c)-w\epsilon_\
 
 The idea is pretty simple but worked, just to use variational auto-encoder (VAE) architecture, compressing the original image's dimension into a latent space, and do diffusion process and reverse process in the latent space so that we can not only saving computational resources, but also make the computation of training diffusion models not prohibitive.
 
+**IDEA**: In the DiT paper, a way to replace the Latent Diffusion Models' classical UNet architecure by transformer blocks has been found. We can deploy this novel architecture into inpainting tasks and do some optimization to fit the task. 
+
+![image](https://github.com/ZenoNing/Zeno_Deep_Learning_Notes/assets/116165764/b2886301-3d96-4026-88d0-0f54c3361a97)
 
 
 # References
