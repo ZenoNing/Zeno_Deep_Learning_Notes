@@ -22,7 +22,7 @@ However, training on their pre-trained models requires high-performance computat
 
 After plenty of debug processes, we have found we passed the matching of hyperparameters. However, we got the next error of CUDA out of memory. Basically, this error means the VRAM is not sufficient for loading the enormous hyperparameters, or the datasets. With the ablation study, we found this error is not due to the datasets since we have already tried to set the `--batch_size=1` and it still didn't work. 
 
-After further investigation, we found that this is basically due to the hyperparameter `--num_channels=256`. If we set the `--num_channels=64` and training not using their pre-trained models but from scratch, the program will run properly. However, without using their pre-trained models, it's theoretically impossible to implement the same results as they did.
+After further investigation, we found that this is basically due to the hyperparameter `--num_channels=256`. If we set the `--num_channels=64` and train the model not using their pre-trained models but from scratch, the program will run properly. However, without using their pre-trained models, it's theoretically impossible to implement the same results as they did.
 
 ## Issue3 LaMa's training process
 
