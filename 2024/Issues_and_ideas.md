@@ -34,7 +34,15 @@ We have already started training this model on CelebA-HQ256 datasets [<sup>2</su
 
 ## pros and cons
 
-Transformers: a great many of parameters; requirement of large amounts of training data; slow convergence process, 
+Transformers: 
+
+a great many of parameters; requirement of large amounts of training data; slow convergence process,
+
+remarkable scaling properties under increasing model size, training compute and data
+
+Diffusion Models:
+
+$\epsilon_\theta (x_t, t, c)$
 
 # References
 
